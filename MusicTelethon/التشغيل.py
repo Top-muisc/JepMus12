@@ -94,7 +94,8 @@ async def play(client, m: Message):
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,                )
             else:
                 await call_py.join_group_call(                    chat_id,                    AudioPiped(                        dl,                    ),                    stream_type=StreamType().pulse_stream,                )
@@ -105,7 +106,8 @@ async def play(client, m: Message):
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,                )
 
     else:
@@ -136,7 +138,8 @@ async def play(client, m: Message):
 **🏷️  العنوان : [{songname}]({url})
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,
                         )
                     else:
@@ -157,7 +160,8 @@ async def play(client, m: Message):
 **🏷️  العنوان : [{songname}]({url})
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,
                             )
                         except Exception as ep:
@@ -199,7 +203,8 @@ async def vplay(client, m: Message):
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,
                 )
             else:
@@ -222,7 +227,8 @@ async def vplay(client, m: Message):
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,                )
 
     else:
@@ -255,7 +261,8 @@ async def vplay(client, m: Message):
 **🏷️  العنوان : [{songname}]({url})
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,                        )
                     else:
                         try:
@@ -268,7 +275,8 @@ async def vplay(client, m: Message):
 **🏷️  العنوان : [{songname}]({url})
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+🎧 طلب من : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,                            )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
@@ -309,7 +317,8 @@ async def playfrom(client, m: Message):
 **▶ ابدأ تشغيل الأغاني من {chat}
 🏷️ العنوان : [{songname}]({link})
 💬 المحادثه : {chat_id}
-🎧 من الطلب : {m.from_user.mention}**
+🎧 من الطلب : {m.from_user.mention}
+💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/lMl10l)**
 """,                    )
             await hmm.delete()
             await m.reply(                f"➕ يضيف {lmt} أغنية في قائمة الانتظار \n• ارسل {HNDLR}التشغيل_التلقائي لاضاف اغنيه في القائمه الانتضار**"            )
