@@ -8,9 +8,6 @@ if os.path.exists(".env"):
 # الفارات
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
-OWNER_NAME = os.getenv("OWNER_NAME")
-CHANNEL = os.getenv("CHANNEL")
-PHOTO_CH = os.getenv("PHOTO_CH")
 SESSION = os.getenv("SESSION")
 HNDLR = os.getenv("HNDLR", "$")
 SUDO_USERS = list(map(int, os.getenv("SUDO_USERS").split()))
