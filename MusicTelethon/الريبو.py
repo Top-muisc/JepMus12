@@ -59,6 +59,8 @@ async def help(client, m: Message):
 
 ⧉ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
+المطور 💻 : {OWNER_NAME}
+القناة 🎈 : {CHANNEL}
 🛠 """
     await m.reply(HELP)
 @Client.on_message(filters.command(["الريبو"], prefixes=f"{HNDLR}"))
