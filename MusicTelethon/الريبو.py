@@ -4,7 +4,7 @@ from datetime import datetime
 from time import time
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import HNDLR, SUDO_USERS
+from config import HNDLR, SUDO_USERS, OWNER_NAME, CHANNEL
 START_TIME = datetime.utcnow()
 TIME_DURATION_UNITS = (    ("Minggu", 60 * 60 * 24 * 7),    ("Hari", 60 * 60 * 24),    ("Jam", 60 * 60),    ("Menit", 60),    ("Detik", 1),)
 async def _human_time_duration(seconds):
@@ -69,7 +69,7 @@ async def repo(client, m: Message):
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
 
-🎶 هذا ميوزك {OWNER_NAME} @jepthon
+🎶 هذا ميوزك {OWNER_NAME} {CHANNEL}
 
 """
     await m.reply(REPO, disable_web_page_preview=True)
