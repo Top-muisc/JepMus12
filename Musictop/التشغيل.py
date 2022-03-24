@@ -25,7 +25,6 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from Musictop.helpers.merrors import capture_err
-top1 = OYOYV
 ARQ_API_KEY = "QFOTZM-GSZUFY-CHGHRX-TDEHOZ-ARQ"
 aiohttpsession = aiohttp.ClientSession()
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
@@ -96,7 +95,7 @@ async def play(client, m: Message):
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,                )
             else:
                 await call_py.join_group_call(                    chat_id,                    AudioPiped(                        dl,                    ),                    stream_type=StreamType().pulse_stream,                )
@@ -108,7 +107,7 @@ async def play(client, m: Message):
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,                )
 
     else:
@@ -140,7 +139,7 @@ async def play(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,
                         )
                     else:
@@ -162,7 +161,7 @@ async def play(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,
                             )
                         except Exception as ep:
@@ -205,7 +204,7 @@ async def vplay(client, m: Message):
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,
                 )
             else:
@@ -229,7 +228,7 @@ async def vplay(client, m: Message):
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,                )
 
     else:
@@ -263,7 +262,7 @@ async def vplay(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,                        )
                     else:
                         try:
@@ -277,7 +276,7 @@ async def vplay(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,                            )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
@@ -319,7 +318,7 @@ async def playfrom(client, m: Message):
 🏷️ العنوان : [{songname}]({link})
 💬 المحادثه : {chat_id}
 🎧 من الطلب : {m.from_user.mention}
-💻 قناة السورس : [ قناة المطور ](t.me/{top1})**
+💻 قناة السورس : [ قناة المطور ](t.me/OYOYV)**
 """,                    )
             await hmm.delete()
             await m.reply(                f"➕ يضيف {lmt} أغنية في قائمة الانتظار \n• ارسل {HNDLR}التشغيل_التلقائي لاضاف اغنيه في القائمه الانتضار**"            )
