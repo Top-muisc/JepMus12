@@ -39,7 +39,7 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 اهلا {m.from_user.mention}!
 
-𝘰𝘳𝘥𝘦𝘳𝘴 𝘮𝘶𝘴𝘪𝘤 [ {OWNER_NAME} ](t.me/Jepthon)
+𝘰𝘳𝘥𝘦𝘳𝘴 𝘮𝘶𝘴𝘪𝘤 [ {OWNER_NAME} ](t.me/{CHANNEL})
 ——————×—————
 
 ⧉ | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}تشغيل  + اسم الاغنية` ]
@@ -60,7 +60,7 @@ async def help(client, m: Message):
 ⧉ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
 المطور 💻 : {OWNER_NAME}
-القناة 🎈 : {CHANNEL}
+القناة 🎈 : @{CHANNEL}
 🛠 """
     await m.reply(HELP)
 @Client.on_message(filters.command(["الريبو"], prefixes=f"{HNDLR}"))
@@ -69,7 +69,7 @@ async def repo(client, m: Message):
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
 
-🎶 هذا ميوزك {OWNER_NAME} {CHANNEL}
+🎶 هذا ميوزك {OWNER_NAME} @{CHANNEL}
 
 """
     await m.reply(REPO, disable_web_page_preview=True)
