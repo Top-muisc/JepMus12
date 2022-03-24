@@ -4,7 +4,7 @@ from datetime import datetime
 from time import time
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import HNDLR, SUDO_USERS, OWNER_NAME, CHANNEL
+from config import HNDLR, SUDO_USERS
 START_TIME = datetime.utcnow()
 TIME_DURATION_UNITS = (    ("Minggu", 60 * 60 * 24 * 7),    ("Hari", 60 * 60 * 24),    ("Jam", 60 * 60),    ("Menit", 60),    ("Detik", 1),)
 async def _human_time_duration(seconds):
@@ -17,8 +17,7 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else ""))
     return ", ".join(parts)
 
-top = GTT_G
-top1= OYOYV
+
 @Client.on_message(    filters.user(SUDO_USERS) & filters.command(["تحديث"], prefixes=f"{HNDLR}"))
 async def restart(client, m: Message):
     await m.delete()
@@ -40,7 +39,7 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋  هلا اخوي {m.from_user.mention}!
 
-ذني اوامرك [ @{top} ](t.me/{top1})
+ذني اوامرك [ @GTT_G ](t.me/OYOYV)
 ——————×—————
 
 ↳♡ | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}تشغيل  + اسم الاغنية` ]
@@ -61,8 +60,8 @@ async def help(client, m: Message):
 ↳♡ | حول السورس ⇦  [ `{HNDLR}السورس` ]
 ↳♡ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}تحديث` ]
 ———————×———————
-المطور 💻 : @{top}
-القناة 🎈 : @{top1}
+المطور 💻 : @GTT_G
+القناة 🎈 : @OYOYV
 🛠 """
     await m.reply(HELP)
 @Client.on_message(filters.command(["السورس"], prefixes=f"{HNDLR}"))
@@ -74,7 +73,7 @@ async def repo(client, m: Message):
 🎶 هذا هو سورس ميوزك توب 
 🤖  اختصاص هذا البوت تنزيل المقاطع الصوتيه
  وتشغيل او تنزيل مقاطع الفيديو و تشغيل 
-@{top} @{top1}
+@GTT_G @OYOYV
 المساعده : @TROTOOL
 
 """
