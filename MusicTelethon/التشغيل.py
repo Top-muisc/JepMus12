@@ -17,7 +17,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio,    HighQualityVideo,    LowQualityVideo,    MediumQualityVideo
 from youtubesearchpython import VideosSearch
-from config import HNDLR, bot, call_py
+from config import HNDLR, bot, call_py, CHANNEL
 from MusicTelethon.helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue
 from MusicTelethon.helpers.decorators import authorized_users_only
 from MusicTelethon.helpers.handlers import skip_current_song, skip_item
@@ -90,24 +90,24 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/cb4eb55eb389e82e8352f.jpg",
+                    photo="{PHOTO_CH}",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [𐇮 جيبثون العرب ](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,                )
             else:
                 await call_py.join_group_call(                    chat_id,                    AudioPiped(                        dl,                    ),                    stream_type=StreamType().pulse_stream,                )
                 add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 await huehue.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/cb4eb55eb389e82e8352f.jpg",
+                    photo="{PHOTO_CH}",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,                )
 
     else:
@@ -139,7 +139,7 @@ async def play(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,
                         )
                     else:
@@ -161,7 +161,7 @@ async def play(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,
                             )
                         except Exception as ep:
@@ -199,12 +199,12 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/cb4eb55eb389e82e8352f.jpg",
+                    photo="{PHOTO_CH}",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,
                 )
             else:
@@ -223,12 +223,12 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/cb4eb55eb389e82e8352f.jpg",
+                    photo="{PHOTO_CH}",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,                )
 
     else:
@@ -262,7 +262,7 @@ async def vplay(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,                        )
                     else:
                         try:
@@ -276,7 +276,7 @@ async def vplay(client, m: Message):
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,                            )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
@@ -312,13 +312,13 @@ async def playfrom(client, m: Message):
                     await call_py.join_group_call(                        chat_id,                        AudioPiped(location),                        stream_type=StreamType().pulse_stream,                    )
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     await m.reply_photo(
-                        photo="https://telegra.ph/file/cb4eb55eb389e82e8352f.jpg",
+                        photo="{PHOTO_CH}",
                         caption=f"""
 **▶ ابدأ تشغيل الأغاني من {chat}
 🏷️ العنوان : [{songname}]({link})
 💬 المحادثه : {chat_id}
 🎧 من الطلب : {m.from_user.mention}
-💻 قناة السورس : [جيبثون العرب](t.me/Jepthon)**
+💻 قناة السورس : [ قناة المطور ](t.me/{CHANNEL})**
 """,                    )
             await hmm.delete()
             await m.reply(                f"➕ يضيف {lmt} أغنية في قائمة الانتظار \n• ارسل {HNDLR}التشغيل_التلقائي لاضاف اغنيه في القائمه الانتضار**"            )
