@@ -65,7 +65,7 @@ async def help(client, m: Message):
 كروب المساعه : @TROTOOL
 🛠 """
     await m.reply(HELP)
-     @Client.on_message(filters.command(["مساعده"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["مساعده"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
     await m.delete()
     TOPP = f"""
